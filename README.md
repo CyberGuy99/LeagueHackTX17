@@ -3,11 +3,13 @@
 A LoL champion analyzer
 
 Features:
- 1. Honor Level Champions
+ 1. Champion Graph by stats (IV and DV can be selected; rest is handelled)
  2. Team Comp Builder
 
 Honor Level Champions:
- 1. Group champions by honor level
+ 1. IV and DV options: 
+ 2. Graph all champions (each champ is a point)
+   - Or show all data for one champion with one mastery level filter vs same champion with another mastery level)
  
  ** filter by type of champion (lane role and/or class)
 
