@@ -1,5 +1,7 @@
 # LeagueHackTX17
 
+A LoL champion analyzer
+
 Features:
  1. Honor Level Champions
  2. Team Comp Builder
