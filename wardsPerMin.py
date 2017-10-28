@@ -10,10 +10,10 @@ def wardsPerMin(matchData)
   losingTeamNumWards = 0
   winningTeamNumWards = 0
   for i in range(len(participants))
-        if (matchData[participants][i][stats]["win"])
-          winningTeamWardsPerMin += (matchData[participants][i][stats]["wardsPlaced"]/gameDuration)
-        else
-          losingTeamWardsPerMin += (matchData[participants][i][stats]["wardsPlaced"]/gameDuration)
+    if (matchData[participants][i][stats]["win"])
+      winningTeamWardsPerMin += (matchData[participants][i][stats]["wardsPlaced"]/gameDuration)
+    else
+      losingTeamWardsPerMin += (matchData[participants][i][stats]["wardsPlaced"]/gameDuration)
   winLoseWards["winningTeamWardsPerMin": winningTeamWardsPerMin]
   winLoseWards["losingTeamWardsPerMin": losingTeamWardsPerMin]
   return winLoseWards
