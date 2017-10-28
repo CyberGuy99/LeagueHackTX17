@@ -7,9 +7,10 @@ Features:
  2. Team Comp Builder
 
 Honor Level Champions:
- 1. IV and DV options: 
+ 1. IV and DV options: {Ban rate, Average Damage Dealt, Average Gold earned, Pick rate} (for a certain summoner, overall)
+    - not all IV/DVs will work for certain summoners, ut all should work for overall
  2. Graph all champions (each champ is a point)
-   - Or show all data for one champion with one mastery level filter vs same champion with another mastery level)
+    - Or show all data for one champion with one mastery level filter vs same champion with another mastery level)
  
  ** filter by type of champion (lane role and/or class)
 
