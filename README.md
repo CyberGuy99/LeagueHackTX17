@@ -18,5 +18,10 @@ Team Comp Builder Features:
  1. User chooses champion(s) 
     - best other champions for team is output (fill)
     - best counter champion(s) is output
+
+Simple features to learn League API/Python:
+ 1. 
+
+
     
  ** For all of these can check a box if interested in early game, mid game, and/or late game
