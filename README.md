@@ -20,7 +20,7 @@ Team Comp Builder Features:
     - best counter champion(s) is output
 
 Simple features to learn League API/Python:
- 1. 
+ 1. Lol idk lmao the only reason I'm adding this is to refamiliarize myself w/ git  
 
 
     
