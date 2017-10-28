@@ -9,7 +9,7 @@ def wardsPerMin(matchData)
   gameDuration = round(matchData["gameDuration"]/60)
   losingTeamNumWards = 0
   winningTeamNumWards = 0
-  for (int i = 0; i < len(participants); i++)
+  for i in range(len(participants))
         if (matchData[participants][i][stats]["win"])
           winningTeamWardsPerMin += (matchData[participants][i][stats]["wardsPlaced"]/gameDuration)
         else
