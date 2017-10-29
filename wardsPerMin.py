@@ -5,35 +5,30 @@ Output: Should return a dictionary {winningTeamWardsPerMin, losingTeamWardsPerMi
 '''
 import API
 
-def wardsPerMinOld(matchData)
-  winLoseWards = {}
-  matchID = matchData[matches][0]["gameID"]
-  gameDuration = round(matchData["gameDuration"]/60)
-  losingTeamNumWards = 0
-  winningTeamNumWards = 0
-  for i in range(len(participants))
-    if (matchData[participants][i][stats]["win"])
-      winningTeamWardsPerMin += (matchData[participants][i][stats]["wardsPlaced"]/gameDuration)
-    else
-      losingTeamWardsPerMin += (matchData[participants][i][stats]["wardsPlaced"]/gameDuration)
-  winLoseWards["winningTeamWardsPerMin": winningTeamWardsPerMin]
-  winLoseWards["losingTeamWardsPerMin": losingTeamWardsPerMin]
-
-  return winLoseWards
-
 def wardsPerMin(gameId):
     '''
     input: gameId
-    returns: (wpmWin,wpmLose) each is an int
+    returns: list, [winningWPM,losingWPM,minutes] each is an int,
+    last in game length in minutes
     '''
     match = API.getMatchData(gameId)
+    matchTime = round(match["gameDuration"]/60)
+    winningTeamWards = 0
+    losingTeamWards = 0
+    for participant in match["participants"]:
+        if participant["stats"]["win"]:
+            winningTeamWards += participant["stats"]["wardsPlaced"]
+        else:
+            losingTeamWards += participant["stats"]["wardsPlaced"]
 
+    winningWPM = winningTeamWards/matchTime
+    losingWPM = losingTeamWards/matchTime
+    return [winningWPM,losingWPM,matchTime]
 
 def main(): #Testing w/ Clayuh
     Clayuh = API.getSummonerDTO("Clayuh")
     gameList = API.makeGameList(Clayuh["accountId"])
-    matchData1 = getMatchData(gameList[0])
-    print(wardsPerMin(matchData1))
+    print(wardsPerMin(gameList[0]))
 
 if __name__ == "__main__":
     main()
