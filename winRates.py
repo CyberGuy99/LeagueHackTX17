@@ -1,3 +1,4 @@
+import math
 '''
 Loop through all the matches that Clayuh has played
 Input: matchData is the dictionary you are taking in to analyze from the API
@@ -18,7 +19,7 @@ def gameDuration(matchData,accountID):
       win = participant["stats"]["win"]
       break
 
-  gameDuration = round(matchData["gameDuration"]/60)
+  gameDuration = math.round(matchData["gameDuration"]/60)
 
   if gameDuration<=20: #all times less than or equal to 20 are mapped to 0
     gameDuration = 0
@@ -26,7 +27,7 @@ def gameDuration(matchData,accountID):
     gameDuration = 8
   else:
     gameDuration -= 20
-    gameDuration = ceil(gameDuration/5) #5 min buckets
+    gameDuration = math.ceil(gameDuration/5) #5 min buckets
 
   if win:
     return gameDuration
