@@ -28,7 +28,7 @@ def wardsPerMin(gameId):
 def main(): #Testing w/ Clayuh
     Clayuh = API.getSummonerDTO("Clayuh")
     gameList = API.makeGameList(Clayuh["accountId"])
-    print(wardsPerMin(gameList[0]))
+    print("For gameId:", gameList[0],"\n wpmWin,wpmLose, and matchTime(min):",wardsPerMin(gameList[0]))
 
 if __name__ == "__main__":
     main()
